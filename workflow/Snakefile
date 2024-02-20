@@ -24,7 +24,7 @@ bedname = os.path.splitext(os.path.basename(bedpath))[0]
 # load sample sheet from a TSV file or create new from samples in 'data' folder
 if config['data']['sample_sheet_path']:
   samples = pd.read_csv(config['data']['sample_sheet_path'], index_col = 'sample', sep = '\t')
-elif config['samples_in_directory']:
+elif config['data']['samples_in_directory']:
   samples = read_sample(config['data']['samples_in_directory'])
 else:
   print('no samples detected')

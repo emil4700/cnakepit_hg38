@@ -41,7 +41,7 @@ rule mutect2_bam:
         fasta=config["reference"]["fasta"],
         map=BAMs_for_CNV_calling,
         idx=BAM_index_for_CNV_calling,
-        dict="resources/reference/hg38.dict",
+        dict=config["reference"]["dict"],
         targets=config["panel_design"],
         gnomad=config["gnomad_af_only"]["vcf"],
         gnomad_index=config["gnomad_af_only"]["index"]
@@ -101,7 +101,7 @@ rule calculate_contamination:
     input:
         pileup="results/mutect2/pile_up_summaries/{sample}.table",
         reference=config["reference"]["fasta"],
-        dict="resources/reference/hg38.dict"
+        dict=config["reference"]["dict"]
     output:
         "results/mutect2/contamination/{sample}.txt"
     benchmark: "benchmarks/calculate_contamination/{sample}.txt"
