@@ -29,7 +29,7 @@ sex:
 reference:
   #fasta: "/fast/work/projects/cubit/18.12/static_data/reference/hg38/ucsc/hg38.fa"
   #index: "/fast/work/projects/cubit/18.12/static_data/reference/hg38/ucsc/hg38.fa.fai"
-  fsasta: "resources/reference/hg38.fa" # use this if you wish to download the reference file
+  fasta: "resources/reference/hg38.fa" # use this if you wish to download the reference file
   ref_index: "resources/reference/hg38.fa.fai"
   dict: "resources/reference/hg38.dict"
   fasta_link: "storage.googleapis.com/genomics-public-data/resources/broad/hg38/v0/Homo_sapiens_assembly38.fasta"
