@@ -31,7 +31,7 @@ fi
 input_file=$1
 
 # Directory to search in
-dir=${2:-"/fast/work/groups/cubi/projects/2021-12-10_Keilholz_SIGN_OC/"}
+dir=$2 
 
 # Output file
 output_file="all_samples_filepath_size.tsv"
