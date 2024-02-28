@@ -37,9 +37,9 @@ reference:
   dict_link: "storage.googleapis.com/genomics-public-data/resources/broad/hg38/v0/Homo_sapiens_assembly38.dict"
 
 data:
-  samples_in_directory: "resources/data/" # path to data dir or false 
+  samples_in_directory: false # path to data dir or false 
   # if previous is false, give path to sample sheet
-  sample_sheet_path: "resources/data/all_samples_filepath_size.tsv" # tab-separated columns: sample|fq1|fq2
+  sample_sheet_path: "resources/data/files.tsv" # tab-separated columns: sample|fq1|fq2
 
 # first run with generic reference or second run with chosen samples as panel of normals (PON) for CNVkit?
 pon:
