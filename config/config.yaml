@@ -39,7 +39,7 @@ reference:
 data:
   samples_in_directory: false # path to data dir or false 
   # if previous is false, give path to sample sheet
-  sample_sheet_path: "resources/data/files.tsv" # tab-separated columns: sample|fq1|fq2
+  sample_sheet_path: "resources/data/files_tobe_analysed.tsv" # tab-separated columns: sample|fq1|fq2
 
 # first run with generic reference or second run with chosen samples as panel of normals (PON) for CNVkit?
 pon:
@@ -49,7 +49,7 @@ pon:
 
 # chromosome column must be like "chr1", not "1"
 # MH panel design
-panel_design: "resources/paneldesign/MH_Covered_liftover_hg38.bed"
+panel_design: "resources/paneldesign/all_covered_hg38.bed"
 # SIGN-OC panel design
 # panel_design: "resources/paneldesign/S3287512_Covered.bed"
 
