@@ -1,7 +1,7 @@
 #!/bin/bash 
 
-input_file=$1 
-output_file="files_tobe_analysed.tsv" 
+input_file="resources/data/$1" 
+output_file="resources/data/files_tobe_analysed.tsv" 
 
 echo -e "samplename\tfq1\tfq2" > $output_file 
 
