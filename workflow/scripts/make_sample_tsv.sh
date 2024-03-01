@@ -1,6 +1,6 @@
 #!/bin/bash 
 
-dir=$1 
+dir="resources/data"
 output_file="resources/data/files.tsv" 
 
 echo -e "samplename\tfq1\tfq2" > $output_file 
