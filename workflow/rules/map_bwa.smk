@@ -15,7 +15,7 @@ rule get_ref_index:
     input:
         HTTP.remote(config["reference"] ["index_link"], keep_local=True)
     output:
-        config["reference"]["index"]
+        config["reference"]["ref_index"]
     shell:
         "mv {input} {output}"
 
@@ -36,7 +36,7 @@ rule bwa_index_reference:
 
 rule bwa_mem_samples:
     input:
-        ref_index=config["reference"]["index"],
+        ref_index=config["reference"]["ref_index"],
         reads=["results/trimmed/{sample}_1P.fq.gz", "results/trimmed/{sample}_2P.fq.gz"],
         idx=multiext(stem, ".amb", ".ann", ".bwt", ".pac", ".sa"),
     output:

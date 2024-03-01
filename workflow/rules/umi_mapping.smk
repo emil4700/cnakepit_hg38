@@ -68,7 +68,7 @@ rule picard_samtofastq:
 
 rule bwa_mem_samples_umi:
     input:
-        ref_index=config["reference"]["index"],
+        ref_index=config["reference"]["ref_index"],
         reads="results/umi_mapping/{sample}_3_samtofastq.fastq",
         idx=multiext(stem, ".amb", ".ann", ".bwt", ".pac", ".sa"),
     # output: "results/umi_mapping/{sample}_4_bwamem.bam"
