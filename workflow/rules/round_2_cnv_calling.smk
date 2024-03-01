@@ -4,7 +4,7 @@ include: 'purecn.smk'
 #--- create 2 long strings with all PON (anti-/)target coverage files -------
 
 # Open the file and read the lines
-with open('resources/data/lowpurity_samples.tsv', 'r') as file:
+with open('resources/data/PON_names.txt', 'r') as file:
     names = file.readlines()
 
 # Remove newline characters
