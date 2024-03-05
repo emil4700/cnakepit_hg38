@@ -18,7 +18,7 @@ while IFS= read -r file_name; do
     fq2_name=${fq2##./}
 
     # print values to tsv file 
-    echo -e "$sample_name\t$fq1\t$fq2" >> $output_file
+    echo -e "$sample_name\t$fq1_name\t$fq2_name" >> $output_file
     echo "$sample_name added" 
 
 done < "$input_file"
