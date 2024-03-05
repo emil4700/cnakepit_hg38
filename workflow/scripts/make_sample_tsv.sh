@@ -13,6 +13,10 @@ while IFS= read -r file_name; do
     fq1=$(find -name $sample_name*R1*)
     fq2=$(find -name $sample_name*R2*)
 
+    # remove ./ at beginning
+    fq1_name=${fq1##./}
+    fq2_name=${fq2##./}
+
     # print values to tsv file 
     echo -e "$sample_name\t$fq1\t$fq2" >> $output_file
     echo "$sample_name added" 
