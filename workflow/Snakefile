@@ -60,12 +60,12 @@ if config['pon']['second_run_with_pon']:
   suffix = '_'+config['pon']['directory_suffix']+'_pon' # add results to new folders with suffix
 else:
   suffix=''
-  include: 'rules/trimming_fastqc.smk'
-  include: 'rules/map_bwa.smk'
-  include: 'rules/umi_mapping.smk'
-  include: 'rules/mutect2.smk'
-  include: 'rules/cnvkit.smk'
-  include: 'rules/purecn.smk'
+include: 'rules/trimming_fastqc.smk'
+include: 'rules/map_bwa.smk'
+include: 'rules/umi_mapping.smk'
+include: 'rules/mutect2.smk'
+include: 'rules/cnvkit.smk'
+include: 'rules/purecn.smk'
   # include: 'rules/qc_map.smk'
   # include: 'rules/stats.smk'
   # include: 'rules/map_bowtie2.smk'
